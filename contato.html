@@ -24,21 +24,22 @@
     <h1>Entre em contato comigo</h1>
     <section class="contato"> 
         <div class="formulario">
-            <form>
+            <form >
                 <label for="nome">Nome: </label>
-                <input type="text" id="nome">
-                <br>
+                <input type="text" id="nome" onkeyup= 'validaNome()' >
+                <div id="txt-nome"></div>
+                
                 <br>
                 <label for="email">Email:</label>
-                <input type="email" id=email>
-                <br>
+                <input type="email" id=email onkeyup='validaEmail()'>
+                <div id="txt-email"></div>
                 <br>
                 <label for="assunto">Assunto: </label>
                 <br>
-                <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea>
+                <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup='validaAssunto()'></textarea>
+                <div id="txt-assunto"></div>
                 <br>
-                <br>
-                <button class="enviar">Enviar</button>
+                <button class="enviar" onclick="enviar()">Enviar</button>
             </form>
 </div>
 <div class="mapa">
@@ -46,11 +47,12 @@
     <p>São Paulo - SP</p>
     <iframe class="maps"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9303885947274!2d-46.64623804977622!3d-23.57094346775527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59bd92bce431%3A0xc37ded133806ef0b!2sAv.%20Paulista%2C%20100%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-000!5e0!3m2!1spt-BR!2sbr!4v1647446040263!5m2!1spt-BR!2sbr" 
-    width="400" 
-    height="300" 
+    id = 'mapa'
     style="border:0;" 
     allowfullscreen="" 
-    loading="lazy">
+    loading="lazy"
+    onmousemove="mapaZoom()"
+    onmouseout="mapaNormal()">
     </iframe>
     </div>
     </section>
@@ -72,5 +74,6 @@
     <p class="center pfooter">Todos os direitos reservados: Marcelo Abreu &copy;</p>
 </div>
 </footer>
+<script src="assets/scripts/script.js"></script>
 </body>
 </html>

@@ -41,12 +41,14 @@
           display: flex;
           flex-direction: row-reverse;
           list-style: none;
+          margin-top:0rem ;
           justify-content: right;
           gap: 1.5rem;
           padding: 1.5rem;
           background-color: #a5b1c2 ;
           
      }
+     
      footer{
           display: flex;
           flex-direction: column;
@@ -98,9 +100,9 @@
           text-align: justify;
      }
      .video{
-          width: 40vw;
+          width: 50vw;
           aspect-ratio: 3/2;
-          display: block;
+          display: flex;
           margin: 1rem auto;
           border-radius: 10px;
      }
@@ -110,14 +112,18 @@
      .contato{
           display: flex;
           justify-content: space-between;
-          align-items: center;
+          align-items: top;
           width: 75vw;
-          margin: 0 auto;
+          margin: 2.5rem auto;
           min-height: 78vh;
      }
-     .formulario{
+     form{
+          margin-left: 0px;
+     }
+     .formulario form{
           max-width: 30vw;
      }
+     
      input, textarea{
           background-color: white;
           width: 100%;
@@ -133,6 +139,7 @@
           padding: 1rem 0;
           background-color: #a5b1c2;
           color: #d1d8e0;
+          border-style: none;
           border-radius: 10px;
           font-size: 1.275rem;
           transition: background-color .3s ease-out;
@@ -162,11 +169,39 @@
             width: 70vw;
             border-radius: 2rem;
           }
+          .enviar{
+               width: 85vw;
+          }
         
           .video {
-            width: 70vw;
+            width: 85vw;
+            aspect-ratio: 3/2;
           }
           .mapa{
-               display: flex;
+               align-items: center;
+          }
+          .maps{
+               width: 85vw;
+               
+               aspect-ratio: 3/2;
+               border-radius: 1rem;
+          }
+          .contato{
+               flex-direction: column;
+               width: 100vw;
+               margin-bottom: 1rem;
+               align-items: center;
+          }
+          .formulario {
+               align-items: center;
+               width: 85vw;
+               margin-bottom: 0rem;
+          }
+          
+          input, textarea{
+               background-color: white;
+               width: 80vw;
+               border-radius: 10px;
+
           }
         }
