@@ -1,73 +1,172 @@
-     h1 {
-     color:#4b6584;
-     }
-     h2{
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+
+     *{   
+          margin: 0;
+          padding: 0;
+          font-family: 'Roboto', sans-serif;
+          background-color:#d1d8e0 ;
           color:#4b6584;
      }
-     .navbar {
-          padding: 20px;
-          margin: 20px;
-     }
-     .navbar li{
-          display: inline;
-          background-color: #4b6584;
-          padding:  20px;
-          margin: 5px;
-          border-radius: 5%;
-     }
-     .navbar li:hover{
-          background-color: #a5b1c2;
-     }
-     .navbar li a {
-          text-decoration: none;
-          color: #c0c0c0;
-          font-size: 20px;
-     }
-     .navbar li a:hover{
-          color: black;
-     }
-     .center {
-        text-align: center;
-     }
-     .justify{
-          text-align: justify;
-     }
-     .p-30{
-          padding: 30px;
-     }
-     .br-50{
-          border: 1px solid #a5b1c2;
-          border-radius: 50% ;
-     }
-     .wh{
-          width: 300px;
-          height: 300px;
-     }
-     .mr-video{
-          border-radius: 10px;
-     }
-     .container{
-     display: flex;
-     flex-flow: row ;   /* coloca a forma que o objeto vai quebrar na mudança de tamanho da pagina*/
-     justify-content: center;
-     align-items: center;
-     }
-     .dark-bg{
-          background-color: #a5b1c2;
-          border-radius: 5px ;
-     }
-     .light-bg{
+     body{
           background-color:#d1d8e0 ;
      }
-     .mb-50{
-          margin-bottom: 50px;
+     /* fonts */
+     h1,h2 {
+     font-family: 'Lato', sans-serif;
+     color:#4b6584;
+     margin-top: 1.5rem;
+     text-align: center;
      }
-     .tm-social{
-          width: 30px;
-          height: 30px;
+     h1{
+          font-size: clamp(2.5rem, 3vw,3.5rem);
+     }
+     h2{
+          font-size: max(2vw,2rem);
+     }
+     .nava{
+          text-decoration: none;
+          background-color: #4b6584;
+          color:#d1d8e0;
+          padding: 1rem;
+          border-radius: 0.3rem;
+     }
+     .nava:hover{
+          background-color: #d1d8e0;
+          color:#4b6584; 
+     }
+     
+     .navbar{
+          display: flex;
+          flex-direction: row-reverse;
+          list-style: none;
+          justify-content: right;
+          gap: 1.5rem;
+          padding: 1.5rem;
+          background-color: #a5b1c2 ;
+          
+     }
+     footer{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: #a5b1c2;
+          padding: 1rem;
      }
 
-     /*CONTATO*/
-     .ml-50{
-          margin-left: 50px;
+     .socialmedia{
+          background-color: #a5b1c2;
+          display: flex;
+          flex-flow: row-reverse;   /* coloca a forma que o objeto vai quebrar na mudança de tamanho da pagina*/
+          justify-content: center;
+          }
+     .afooter{
+          background-color: #a5b1c2;
      }
+     .pfooter{
+          background-color: #a5b1c2;
+          text-align: center;
+     }
+     .tm-social{
+          background-color: #a5b1c2;
+          width: 30px;
+          height: 30px;
+          padding-left: 10px;
+          }
+
+     /*INDEX.HTML*/
+     .sobre {
+          width: 80vw;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: row;
+          gap: 3rem;
+          align-items: center;
+     }
+     .imagemMAIN{
+          border-radius: 50%;
+          width: 25vw;
+          border: 3px solid #4b6584;
+          padding: 1px;
+
+     }
+     .texto{
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          text-align: justify;
+     }
+     .video{
+          width: 40vw;
+          aspect-ratio: 3/2;
+          display: block;
+          margin: 1rem auto;
+          border-radius: 10px;
+     }
+ 
+     /*CONTATO*/
+
+     .contato{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 75vw;
+          margin: 0 auto;
+          min-height: 78vh;
+     }
+     .formulario{
+          max-width: 30vw;
+     }
+     input, textarea{
+          background-color: white;
+          width: 100%;
+          padding: 5px 10px;
+          border-radius: 10px;
+          border: 0;
+          margin-bottom: 1rem;
+     }
+     .enviar {
+          width: 75%;
+          margin: 0rem auto;
+          display: block;
+          padding: 1rem 0;
+          background-color: #a5b1c2;
+          color: #d1d8e0;
+          border-radius: 10px;
+          font-size: 1.275rem;
+          transition: background-color .3s ease-out;
+        }
+        .enviar:hover {
+          background-color: #4b6584;
+        }
+        .mapa{
+             width: 40vw;
+             display: flex;
+             flex-direction: column;
+        }
+        .maps{
+             width: 100%;
+             aspect-ratio: 2/1;
+             border-radius: 1rem;
+        }
+
+
+        @media screen and (max-width: 768px) {
+          .sobre {
+            width: 90vw;
+            flex-direction: column;
+          }
+        
+          .imagem {
+            width: 70vw;
+            border-radius: 2rem;
+          }
+        
+          .video {
+            width: 70vw;
+          }
+          .mapa{
+               display: flex;
+          }
+        }
