@@ -9,16 +9,20 @@
     
 </head>
 <body>
-    <nav>
-        <ul class="navbar">
+    <header>
+        <a href="#" class="logo">M.M.A</a>
+        <ul>
             <li>
-            <a class ="nava" href="index.html">Home</a>
+                <a href="index.html">HOME</a>
             </li>
             <li>
-                <a class = "nava" href="contato.html">Contato</a>
+                <a  href="contato.html">CONTATO</a>
+            </li>
+            <li>
+                <a href="filmes.html">FILMES</a>
             </li>
         </ul>
-    </nav>
+</header>
     
 <main>
     <h1>Entre em contato comigo</h1>
@@ -36,8 +40,9 @@
                 <br>
                 <label for="assunto">Assunto: </label>
                 <br>
-                <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup='validaAssunto()'></textarea>
-                <div id="txt-assunto"></div>
+                <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup='counter()'></textarea>
+                <div id ="txt-assunto"></div>
+                <div id="contador" >0/100</div>
                 <br>
                 <button class="enviar" onclick="enviar()">Enviar</button>
             </form>
@@ -51,16 +56,14 @@
     style="border:0;" 
     allowfullscreen="" 
     loading="lazy"
-    onmousemove="mapaZoom()"
-    onmouseout="mapaNormal()">
+    >
     </iframe>
     </div>
     </section>
 </main>
+<hr>
 <footer>
-    <div class="footer">
     <div class="socialmedia">
-        
         <a class="afooter"
         href="https://github.com/m-arceloabreu" target="_blank">
             <img class="tm-social" src="assets/img/github.png" alt="Logo do Github">
@@ -71,8 +74,8 @@
             src="assets/img/linkedin.png" alt="Logo do linkedin">
         </a>
     </div>
-    <p class="center pfooter">Todos os direitos reservados: Marcelo Abreu &copy;</p>
-</div>
+    <p >Todos os direitos reservados: Marcelo Abreu &copy;
+    </p>
 </footer>
 <script src="assets/scripts/script.js"></script>
 </body>

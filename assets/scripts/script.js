@@ -45,16 +45,18 @@ function validaEmail(){
     }
 }
 
-function validaAssunto(){
-    txtAssunto = document.querySelector('#txt-assunto')
-    
+function counter(){
+    contador = document.querySelector('#contador')
+    tamanho = assunto.value.length;
     if(assunto.value.length >= 100){
-        txtAssunto.innerHTML = 'Texto muito comprido! Digite no máximo 100 caracteres'
-        txtAssunto.style.color = 'red'
-        txtAssunto.style.display ='block'
+        contador.innerHTML = tamanho + ('/100 (Máximo de 100 Caracteres!!!)')
+        contador.style.color = 'red'
+        assuntoOk = false;
+        
     }else{
-        txtAssunto.style.display = 'none'
-        assuntoOk = true;
+        contador.innerHTML = tamanho + ('/100')
+        contador.style.color = '#4b6584';
+        assuntoOk = true;  
     }
 }
 function enviar(){
@@ -66,10 +68,7 @@ function enviar(){
     }
 }
 
-function mapaZoom(){
-    mapa.style.width = '80vw'
 
-}
 function mapaNormal(){
     mapa.style.width = '40vw'
 
